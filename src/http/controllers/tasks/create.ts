@@ -5,7 +5,7 @@ import { makeCreateTaskUseCase } from '@/use-cases/factories/make-create-task-us
 export async function create(request: FastifyRequest, reply: FastifyReply) {
   const createGymBodySchema = z.object({
     description: z.string(),
-    priority: z.string(),
+    priority: z.enum(['alto', 'médio', 'baixo']),
   })
 
   const { description, priority } = createGymBodySchema.parse(request.body)

@@ -9,7 +9,7 @@ export async function update(request: FastifyRequest, reply: FastifyReply) {
 
   const updateBodySchema = z.object({
     description: z.string(),
-    priority: z.string(),
+    priority: z.enum(['alto', 'médio', 'baixo']),
   })
 
   const { id } = updateParamsSchema.parse(request.params)

@@ -1,7 +1,7 @@
 import fastify from 'fastify'
 import { tasksRoutes } from './http/controllers/tasks/routes'
-import { ZodError } from 'zod'
 import { env } from './env'
+import { ZodError } from 'zod'
 
 export const app = fastify()
 
